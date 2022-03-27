@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D20B866127E95AA8005C271E /* FinanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20B866027E95AA8005C271E /* FinanceView.swift */; };
 		D211227F27B8B46E00058D6E /* PropertyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D211227E27B8B46E00058D6E /* PropertyDetailView.swift */; };
 		D2139AE327B2A46100E63C94 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2139AE227B2A46100E63C94 /* SplashViewModel.swift */; };
 		D2139AE527B2A4EE00E63C94 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2139AE427B2A4EE00E63C94 /* Property.swift */; };
@@ -29,7 +30,9 @@
 		D233D1A827BA012400CE6308 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D233D1A227BA012400CE6308 /* DatabaseManager.swift */; };
 		D233D1AD27BA033F00CE6308 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D233D1AB27BA033F00CE6308 /* Extensions.swift */; };
 		D23895E127B76F780056EE7F /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23895E027B76F780056EE7F /* SignUpView.swift */; };
+		D2451B6E27C9CA3F00AA7C6D /* PropertyDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2451B6D27C9CA3F00AA7C6D /* PropertyDetailViewModel.swift */; };
 		D25414B627BACC22007D0CFE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D25414B527BACC22007D0CFE /* GoogleService-Info.plist */; };
+		D25EB0EA27F0B2890087A893 /* AddTenantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25EB0E927F0B2890087A893 /* AddTenantView.swift */; };
 		D2BB9A9B27AF01E70083453A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BB9A9A27AF01E70083453A /* AppDelegate.swift */; };
 		D2BB9A9D27AF01E70083453A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BB9A9C27AF01E70083453A /* SceneDelegate.swift */; };
 		D2BB9A9F27AF01E70083453A /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BB9A9E27AF01E70083453A /* SplashView.swift */; };
@@ -43,6 +46,7 @@
 		5D660BF1E5F46AAEFA45801F /* Pods-Kai.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kai.debug.xcconfig"; path = "Target Support Files/Pods-Kai/Pods-Kai.debug.xcconfig"; sourceTree = "<group>"; };
 		8411CC1AB295904072B60C31 /* Pods-Kai.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kai.release.xcconfig"; path = "Target Support Files/Pods-Kai/Pods-Kai.release.xcconfig"; sourceTree = "<group>"; };
 		ADEBEFFBB21BAF5DB21494E5 /* Pods_Kai.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kai.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D20B866027E95AA8005C271E /* FinanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceView.swift; sourceTree = "<group>"; };
 		D211227E27B8B46E00058D6E /* PropertyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDetailView.swift; sourceTree = "<group>"; };
 		D2139AE227B2A46100E63C94 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		D2139AE427B2A4EE00E63C94 /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
@@ -65,7 +69,9 @@
 		D233D1A227BA012400CE6308 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		D233D1AB27BA033F00CE6308 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D23895E027B76F780056EE7F /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		D2451B6D27C9CA3F00AA7C6D /* PropertyDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDetailViewModel.swift; sourceTree = "<group>"; };
 		D25414B527BACC22007D0CFE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D25EB0E927F0B2890087A893 /* AddTenantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTenantView.swift; sourceTree = "<group>"; };
 		D2BB9A9727AF01E70083453A /* Kai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2BB9A9A27AF01E70083453A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2BB9A9C27AF01E70083453A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,9 +102,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D20B865F27E958BF005C271E /* Finance */ = {
+			isa = PBXGroup;
+			children = (
+				D20B866027E95AA8005C271E /* FinanceView.swift */,
+			);
+			path = Finance;
+			sourceTree = "<group>";
+		};
 		D2139AE127B2A37600E63C94 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D20B865F27E958BF005C271E /* Finance */,
+				D2451B6C27C9CA1700AA7C6D /* PropertyDetail */,
 				D22951FE27BC9E630019817A /* Add */,
 				D233D19327B961A900CE6308 /* Portfolio */,
 				D2BB9A9E27AF01E70083453A /* SplashView.swift */,
@@ -106,7 +122,6 @@
 				D2139AE927B2AA9E00E63C94 /* SplashScreen.swift */,
 				D2139AEB27B2B18900E63C94 /* LoginView.swift */,
 				D23895E027B76F780056EE7F /* SignUpView.swift */,
-				D211227E27B8B46E00058D6E /* PropertyDetailView.swift */,
 				D233D19127B9475000CE6308 /* FinanceAllView.swift */,
 			);
 			path = View;
@@ -127,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				D22951FF27BC9E7D0019817A /* AddPropertyView.swift */,
+				D25EB0E927F0B2890087A893 /* AddTenantView.swift */,
 			);
 			path = Add;
 			sourceTree = "<group>";
@@ -166,6 +182,15 @@
 				D2BB9AA527AF01EA0083453A /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		D2451B6C27C9CA1700AA7C6D /* PropertyDetail */ = {
+			isa = PBXGroup;
+			children = (
+				D211227E27B8B46E00058D6E /* PropertyDetailView.swift */,
+				D2451B6D27C9CA3F00AA7C6D /* PropertyDetailViewModel.swift */,
+			);
+			path = PropertyDetail;
 			sourceTree = "<group>";
 		};
 		D2BB9A8E27AF01E70083453A = {
@@ -343,9 +368,12 @@
 				D233D19A27BA010400CE6308 /* User.swift in Sources */,
 				D233D1AD27BA033F00CE6308 /* Extensions.swift in Sources */,
 				D22B77BB27C30CB000F8B200 /* appColors.swift in Sources */,
+				D2451B6E27C9CA3F00AA7C6D /* PropertyDetailViewModel.swift in Sources */,
 				D233D19527B9625E00CE6308 /* PortfolioViewModel.swift in Sources */,
 				D229520027BC9E7D0019817A /* AddPropertyView.swift in Sources */,
 				D2BB9A9D27AF01E70083453A /* SceneDelegate.swift in Sources */,
+				D25EB0EA27F0B2890087A893 /* AddTenantView.swift in Sources */,
+				D20B866127E95AA8005C271E /* FinanceView.swift in Sources */,
 				D2BB9A9F27AF01E70083453A /* SplashView.swift in Sources */,
 				D233D1A727BA012400CE6308 /* AnalyticsManager.swift in Sources */,
 				D233D19227B9475000CE6308 /* FinanceAllView.swift in Sources */,

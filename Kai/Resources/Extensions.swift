@@ -8,6 +8,11 @@
 import Foundation
 import UIKit
 
+extension UIScreen{
+   static let Width = UIScreen.main.bounds.size.width
+   static let Height = UIScreen.main.bounds.size.height
+   static let Size = UIScreen.main.bounds.size
+}
 
 extension UIView{
     var top: CGFloat{

@@ -6,21 +6,6 @@
 //
 import Combine
 import SwiftUI
-struct GeometryGetter: View {
-    @Binding var rect: CGRect
-
-    var body: some View {
-        GeometryReader { geometry in
-            Group { () -> AnyView in
-                DispatchQueue.main.async {
-                    self.rect = geometry.frame(in: .global)
-                }
-
-                return AnyView(Color.clear)
-            }
-        }
-    }
-}
 
 private func createNewPostID() -> String? {
     let timeStamp = Date().timeIntervalSince1970
@@ -101,142 +86,212 @@ struct AddPropertyView: View {
     
     var body: some View {
         ScrollView(.vertical){
+            Text("Complete your property data")
+            Text("and start management")
             VStack{
-                //Group{
-                HStack {
-                    Image(systemName: "magnifyingglass")
-                        .foregroundColor(.white)
-                    TextField("Search",
-                              text: $searchValue)
-                        .foregroundColor(.white)
+                VStack{
+                    
+                    //Group{
+                    
+                    
+                    
+                    HStack{
+                        Text("Name")
+                        Spacer()
+                        
+                    }
+                    
+                    TextField("Name",text:$name)
+                        .padding()
+                        .background(RoundedRectangle(cornerRadius: 100).fill(Color.addTextfield))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 100)
+                                .stroke(Color.addTextfield,lineWidth: 1)
+                            
+                        )
                         .disableAutocorrection(true)
                         .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
-                        .foregroundColor(.white)
+                    // .foregroundColor(.black)
+                    //
+                    //.background(Capsule().fill(Color.addTextfield))
+                    HStack{
+                        Text("Address")
+                        Spacer()
+                        
+                    }
+                    
+                    TextField("Address",text:$address)
+                        .padding()
+                        .background(RoundedRectangle(cornerRadius: 100).fill(Color.addTextfield))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 100)
+                                .stroke(Color.addTextfield,lineWidth: 1)
+                            
+                        )
+                        .disableAutocorrection(true)
+                        .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
+                    HStack{
+                        VStack{
+                            HStack{
+                                Text("Puschase Date")
+                                Spacer()
+                                
+                            }
+                            TextField("Purchase Date",text:$purchaseDate)
+                                .padding()
+                                .background(RoundedRectangle(cornerRadius: 100).fill(Color.addTextfield))
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 100)
+                                        .stroke(Color.addTextfield,lineWidth: 1)
+                                    
+                                )
+                                .disableAutocorrection(true)
+                                .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
+                                .frame(width: 150, height: 44)
+                        }
+                        
+                        VStack{
+                            HStack{
+                                Text("Unit")
+                                Spacer()
+                                
+                            }
+                            TextField("Unit",text:$units)
+                                .padding()
+                                .background(RoundedRectangle(cornerRadius: 100).fill(Color.addTextfield))
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 100)
+                                        .stroke(Color.addTextfield,lineWidth: 1)
+                                    
+                                )
+                                .disableAutocorrection(true)
+                                .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
+                                .frame(width: 150, height: 44)
+                                .onReceive(Just(units)) { newValue in
+                                    let filtered = newValue.filter { "0123456789".contains($0) }
+                                    if filtered != newValue {
+                                        self.units = filtered
+                                    }
+                                }
+                        }
+                    }
+                    HStack{
+                        Text("Mortgage")
+                        Spacer()
+                    }
+                    TextField("Mortgage",text:$Mortgage)
+                        .padding()
+                        .disableAutocorrection(true)
+                        .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
+                        .keyboardType(.numberPad)
+                        .background(Capsule().fill(Color.addTextfield))
+                        .onReceive(Just(Mortgage)) { newValue in
+                            let filtered = newValue.filter { "0123456789".contains($0) }
+                            if filtered != newValue {
+                                self.Mortgage = filtered
+                            }
+                        }
+                    
+                    
+                }
+                HStack{
+                    VStack{
+                        HStack{
+                            Text("Insurance")
+                            Spacer()
+                            
+                        }
+                        TextField("Insurance",text:$insurance)
+                            .padding()
+                            .disableAutocorrection(true)
+                            .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
+                            .keyboardType(.numberPad)
+                            .background(Capsule().fill(Color.addTextfield))
+                            .onReceive(Just(insurance)) { newValue in
+                                let filtered = newValue.filter { "0123456789".contains($0) }
+                                if filtered != newValue {
+                                    self.insurance = filtered
+                                }
+                            }
+                            .frame(width: 150, height: 44)
+                    }
+                    VStack{
+                        HStack{
+                            Text("Taxes")
+                            Spacer()
+                        }
+                        TextField("Taxes",text:$taxes)
+                            .padding()
+                            .disableAutocorrection(true)
+                            .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
+                            .keyboardType(.numberPad)
+                            .background(Capsule().fill(Color.addTextfield))
+                            .onReceive(Just(taxes)) { newValue in
+                                let filtered = newValue.filter { "0123456789".contains($0) }
+                                if filtered != newValue {
+                                    self.taxes = filtered
+                                }
+                            }
+                        
+                    }
+                    
+                    
                 }
                 
-                .padding()
-                    .background(Capsule().fill(Color.addTextfield))
-                
-                
-                TextField("Name",text:$name)
-                    .padding()
-                    .disableAutocorrection(true)
-                    .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
-                
-                
-                TextField("Address",text:$address)
-                    .padding()
-                    .disableAutocorrection(true)
-                    .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
-                
-                TextField("Purchase Date",text:$purchaseDate)
-                    .padding()
-                    .disableAutocorrection(true)
-                    .autocapitalization(.none)
-                
-                TextField("Unit",text:$units)
-                    .padding()
-                    .disableAutocorrection(true)
-                    .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
-                    .keyboardType(.numberPad)
-                    .onReceive(Just(units)) { newValue in
-                        let filtered = newValue.filter { "0123456789".contains($0) }
-                        if filtered != newValue {
-                            self.units = filtered
-                        }
-                    }
-                
-                TextField("Mortgage",text:$Mortgage)
-                    .padding()
-                    .disableAutocorrection(true)
-                    .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
-                    .keyboardType(.numberPad)
-                    .onReceive(Just(Mortgage)) { newValue in
-                        let filtered = newValue.filter { "0123456789".contains($0) }
-                        if filtered != newValue {
-                            self.Mortgage = filtered
-                        }
-                    }
-                
-                TextField("Insurance",text:$insurance)
-                    .padding()
-                    .disableAutocorrection(true)
-                    .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
-                    .keyboardType(.numberPad)
-                    .onReceive(Just(insurance)) { newValue in
-                        let filtered = newValue.filter { "0123456789".contains($0) }
-                        if filtered != newValue {
-                            self.insurance = filtered
-                        }
-                    }
-                
-                TextField("Taxes",text:$taxes)
-                    .padding()
-                    .disableAutocorrection(true)
-                    .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
-                    .keyboardType(.numberPad)
-                    .onReceive(Just(taxes)) { newValue in
-                        let filtered = newValue.filter { "0123456789".contains($0) }
-                        if filtered != newValue {
-                            self.taxes = filtered
-                        }
-                    }
-                //}
                 
                 
                 
-                
-                Button(action: {
-                    guard !name.isEmpty, !name.isEmpty else {
-                        return
-                    }
-                    let tmpProp = Property(
-                        id: "",
-                        name: name,
-                        image: "",
-                        units: Int(units) ?? 0,
-                        owned: purchaseDate,
-                        address: address,
-                        expense: 0,
-                        income: 0,
-                        cashflow: 0,
-                        taxes: Int(taxes) ?? 0,
-                        insurance: Int(insurance) ?? 0
-                    )
-                    //addProperty(property: tmpProp)
-                    var t = tmpProp
-                    print(t)
-                    UserDefaults.standard.setValue("mrcolas", forKey: "username")
-                    
-                    guard let newPostID = createNewPostID(),
-                          let stringDate = String.date(from: Date()) else {
-                              return
-                          }
-                    t.id = newPostID
-                    DatabaseManager.shared.createProperty(newProperty: t) { finished in
-                        guard finished else {
-                            return
-                        }
-                        DispatchQueue.main.async {
-                            // presentation.wrappedValue.dismiss()
-                            self.rootPresentationMode.wrappedValue.dismiss()
-                        }
-                    }
-                }, label: {
-                    Text("Submit")
-                        .foregroundColor(.white)
-                        .frame(width: 319, height: 45, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        .background(Color(red: 0.063, green: 0.376, blue: 0.282))
-                        .clipShape(Capsule())
-                })
-                
-                
-                Spacer()
             }
             .navigationTitle("Add Property")
+            .frame(width: 350, height: 446, alignment: .center)
             
             
+            
+            Button(action: {
+                guard !name.isEmpty, !name.isEmpty else {
+                    return
+                }
+                let tmpProp = Property(
+                    id: "",
+                    name: name,
+                    image: "",
+                    units: Int(units) ?? 0,
+                    owned: purchaseDate,
+                    address: address,
+                    expense: 0,
+                    income: 0,
+                    cashflow: 0,
+                    taxes: Int(taxes) ?? 0,
+                    insurance: Int(insurance) ?? 0
+                )
+                //addProperty(property: tmpProp)
+                var t = tmpProp
+                print(t)
+                UserDefaults.standard.setValue("mrcolas", forKey: "username")
+                
+                guard let newPostID = createNewPostID(),
+                      let stringDate = String.date(from: Date()) else {
+                          return
+                      }
+                t.id = newPostID
+                DatabaseManager.shared.createProperty(newProperty: t) { finished in
+                    guard finished else {
+                        return
+                    }
+                    DispatchQueue.main.async {
+                        // presentation.wrappedValue.dismiss()
+                        self.rootPresentationMode.wrappedValue.dismiss()
+                    }
+                }
+            }, label: {
+                Text("Submit")
+                    .foregroundColor(.white)
+                    .frame(width: 319, height: 45, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .background(Color(red: 0.063, green: 0.376, blue: 0.282))
+                    .clipShape(Capsule())
+            })
         }
+        
     }
 }
 

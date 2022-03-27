@@ -74,7 +74,7 @@ final class DatabaseManager{
             return
         }
 
-        let reference = database.document("Tenants/\(username)/Tenant/\(newTenant.identifer)")
+        let reference = database.document("Tenants/\(username)/Tenant/\(newTenant.id)")
         guard let data = newTenant.asDictionary() else {
             completion(false)
             return

@@ -29,13 +29,22 @@ struct PortfolioView: View {
                     .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
                 
                 List(viewModel.properties, id: \.id) { property in
-                    propertyCell(propety: property)
+                    NavigationLink(destination: PropertyDetailView(property: property)) {
+                        propertyCell(propety: property)
+                    }
+                    
                 }.onAppear{viewModel.getProperties()}
-                
-                NavigationLink("Add Property",destination: AddPropertyView(), isActive: self.$isActive )
-                    .isDetailLink(false)
-                    .foregroundColor(.red)
-                
+                HStack{
+                    NavigationLink("Add Property",destination: AddPropertyView(), isActive: self.$isActive )
+                        .isDetailLink(false)
+                        .foregroundColor(.yellow)
+                    NavigationLink("Fianace",destination: FinanceView(), isActive: self.$isActive )
+                        .isDetailLink(false)
+                        .foregroundColor(.red)
+                    NavigationLink("Tenant",destination: AddTenantView(), isActive: self.$isActive )
+                        .isDetailLink(false)
+                        .foregroundColor(.blue)
+                }
                 
             }
             .navigationBarTitle("Portfolio")
@@ -180,6 +189,7 @@ struct topBar: View {
                     }
                     Image(systemName: "message")
                     NavigationLink("add property", destination: AddPropertyView())
+                   
                 }
                
                 HStack {

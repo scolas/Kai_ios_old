@@ -57,7 +57,21 @@ struct LoginView: View {
         }.onAppear{
             viewModel.signedIn = viewModel.isSignedIn
         }*/
-        PortfolioView()
+        TabView{
+            PortfolioView()
+                .tabItem{
+                    Image(systemName: "house")
+                }
+            FinanceView()
+                .tabItem{
+                    Image(systemName: "wallet.pass")
+                }
+            AddPropertyView()
+                .tabItem{
+                    Image(systemName: "plus.circle")
+                }
+        }
+        
     }
 
 }

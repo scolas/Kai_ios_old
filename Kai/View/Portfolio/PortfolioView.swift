@@ -44,6 +44,9 @@ struct PortfolioView: View {
                     NavigationLink("Tenant",destination: AddTenantView(), isActive: self.$isActive )
                         .isDetailLink(false)
                         .foregroundColor(.blue)
+                    NavigationLink("Form",destination: AddTenantFormView(), isActive: self.$isActive )
+                        .isDetailLink(false)
+                        .foregroundColor(.black)
                 }
                 
             }

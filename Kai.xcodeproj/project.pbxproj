@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D20B866127E95AA8005C271E /* FinanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20B866027E95AA8005C271E /* FinanceView.swift */; };
+		D20C91AD27F1EAC60066FB7A /* AddTenantFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20C91AC27F1EAC60066FB7A /* AddTenantFormView.swift */; };
 		D211227F27B8B46E00058D6E /* PropertyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D211227E27B8B46E00058D6E /* PropertyDetailView.swift */; };
 		D2139AE327B2A46100E63C94 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2139AE227B2A46100E63C94 /* SplashViewModel.swift */; };
 		D2139AE527B2A4EE00E63C94 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2139AE427B2A4EE00E63C94 /* Property.swift */; };
@@ -47,6 +48,7 @@
 		8411CC1AB295904072B60C31 /* Pods-Kai.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kai.release.xcconfig"; path = "Target Support Files/Pods-Kai/Pods-Kai.release.xcconfig"; sourceTree = "<group>"; };
 		ADEBEFFBB21BAF5DB21494E5 /* Pods_Kai.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kai.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D20B866027E95AA8005C271E /* FinanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceView.swift; sourceTree = "<group>"; };
+		D20C91AC27F1EAC60066FB7A /* AddTenantFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTenantFormView.swift; sourceTree = "<group>"; };
 		D211227E27B8B46E00058D6E /* PropertyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDetailView.swift; sourceTree = "<group>"; };
 		D2139AE227B2A46100E63C94 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		D2139AE427B2A4EE00E63C94 /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			children = (
 				D22951FF27BC9E7D0019817A /* AddPropertyView.swift */,
 				D25EB0E927F0B2890087A893 /* AddTenantView.swift */,
+				D20C91AC27F1EAC60066FB7A /* AddTenantFormView.swift */,
 			);
 			path = Add;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D233D1A527BA012400CE6308 /* HapticsManager.swift in Sources */,
+				D20C91AD27F1EAC60066FB7A /* AddTenantFormView.swift in Sources */,
 				D2139AE527B2A4EE00E63C94 /* Property.swift in Sources */,
 				D2139AE827B2A62600E63C94 /* PortfolioView.swift in Sources */,
 				D233D19B27BA010400CE6308 /* Tenate.swift in Sources */,

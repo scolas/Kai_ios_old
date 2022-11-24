@@ -197,19 +197,7 @@ struct AddTenantView: View {
                 guard !name.isEmpty, !name.isEmpty else {
                     return
                 }
-                let tmpProp = Kai.Property(
-                    id: "",
-                    name: name,
-                    image: "",
-                    units: Int(unitNumber) ?? 0,
-                    owned: "",
-                    address: "address",
-                    expense: 0,
-                    income: 0,
-                    cashflow: 0,
-                    taxes: Int(taxes) ?? 0,
-                    insurance: Int(insurance) ?? 0
-                )
+                let tmpProp = MockData.mockProperty
                 //addProperty(property: tmpProp)
                 var t = tmpProp
                 print(t)

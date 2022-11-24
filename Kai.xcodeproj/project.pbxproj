@@ -34,12 +34,19 @@
 		D2451B6E27C9CA3F00AA7C6D /* PropertyDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2451B6D27C9CA3F00AA7C6D /* PropertyDetailViewModel.swift */; };
 		D25414B627BACC22007D0CFE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D25414B527BACC22007D0CFE /* GoogleService-Info.plist */; };
 		D25EB0EA27F0B2890087A893 /* AddTenantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25EB0E927F0B2890087A893 /* AddTenantView.swift */; };
+		D26AFCCE292DCC9C002C983A /* PayRent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26AFCCD292DCC9C002C983A /* PayRent.swift */; };
+		D26AFCD0292DCCDA002C983A /* TenantHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26AFCCF292DCCDA002C983A /* TenantHome.swift */; };
 		D2BB9A9B27AF01E70083453A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BB9A9A27AF01E70083453A /* AppDelegate.swift */; };
 		D2BB9A9D27AF01E70083453A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BB9A9C27AF01E70083453A /* SceneDelegate.swift */; };
 		D2BB9A9F27AF01E70083453A /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BB9A9E27AF01E70083453A /* SplashView.swift */; };
 		D2BB9AA127AF01EA0083453A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2BB9AA027AF01EA0083453A /* Assets.xcassets */; };
 		D2BB9AA427AF01EA0083453A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2BB9AA327AF01EA0083453A /* Preview Assets.xcassets */; };
 		D2BB9AA727AF01EA0083453A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2BB9AA527AF01EA0083453A /* LaunchScreen.storyboard */; };
+		D2BD4E92292EDCFD003FA747 /* MakePaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD4E91292EDCFD003FA747 /* MakePaymentView.swift */; };
+		D2BD4E94292FDD6F003FA747 /* Apartment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD4E93292FDD6F003FA747 /* Apartment.swift */; };
+		D2BD4E98292FE6DB003FA747 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD4E97292FE6DB003FA747 /* Payment.swift */; };
+		D2BD4E9E2930028B003FA747 /* TabBarOwnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD4E9D2930028B003FA747 /* TabBarOwnerView.swift */; };
+		D2BD4EA0293002AB003FA747 /* TabBarTenantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD4E9F293002AB003FA747 /* TabBarTenantView.swift */; };
 		EB4BC79D11BCDC8D60461D9D /* Pods_Kai.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADEBEFFBB21BAF5DB21494E5 /* Pods_Kai.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +81,8 @@
 		D2451B6D27C9CA3F00AA7C6D /* PropertyDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDetailViewModel.swift; sourceTree = "<group>"; };
 		D25414B527BACC22007D0CFE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D25EB0E927F0B2890087A893 /* AddTenantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTenantView.swift; sourceTree = "<group>"; };
+		D26AFCCD292DCC9C002C983A /* PayRent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayRent.swift; sourceTree = "<group>"; };
+		D26AFCCF292DCCDA002C983A /* TenantHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenantHome.swift; sourceTree = "<group>"; };
 		D2BB9A9727AF01E70083453A /* Kai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2BB9A9A27AF01E70083453A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2BB9A9C27AF01E70083453A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +91,11 @@
 		D2BB9AA327AF01EA0083453A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D2BB9AA627AF01EA0083453A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2BB9AA827AF01EA0083453A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2BD4E91292EDCFD003FA747 /* MakePaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakePaymentView.swift; sourceTree = "<group>"; };
+		D2BD4E93292FDD6F003FA747 /* Apartment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apartment.swift; sourceTree = "<group>"; };
+		D2BD4E97292FE6DB003FA747 /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
+		D2BD4E9D2930028B003FA747 /* TabBarOwnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarOwnerView.swift; sourceTree = "<group>"; };
+		D2BD4E9F293002AB003FA747 /* TabBarTenantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarTenantView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +121,7 @@
 		D20B865F27E958BF005C271E /* Finance */ = {
 			isa = PBXGroup;
 			children = (
+				D233D19127B9475000CE6308 /* FinanceAllView.swift */,
 				D20B866027E95AA8005C271E /* FinanceView.swift */,
 			);
 			path = Finance;
@@ -115,16 +130,14 @@
 		D2139AE127B2A37600E63C94 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D2BD4E9B29300236003FA747 /* Core */,
+				D2BD4E9A293001D0003FA747 /* Register */,
+				D2BD4E99293001BD003FA747 /* Splash */,
+				D26AFCCB292DCC30002C983A /* Tenant */,
 				D20B865F27E958BF005C271E /* Finance */,
 				D2451B6C27C9CA1700AA7C6D /* PropertyDetail */,
 				D22951FE27BC9E630019817A /* Add */,
 				D233D19327B961A900CE6308 /* Portfolio */,
-				D2BB9A9E27AF01E70083453A /* SplashView.swift */,
-				D2139AE227B2A46100E63C94 /* SplashViewModel.swift */,
-				D2139AE927B2AA9E00E63C94 /* SplashScreen.swift */,
-				D2139AEB27B2B18900E63C94 /* LoginView.swift */,
-				D23895E027B76F780056EE7F /* SignUpView.swift */,
-				D233D19127B9475000CE6308 /* FinanceAllView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -136,6 +149,8 @@
 				D233D19827BA010400CE6308 /* Tenate.swift */,
 				D233D19727BA010400CE6308 /* User.swift */,
 				D2139AE427B2A4EE00E63C94 /* Property.swift */,
+				D2BD4E93292FDD6F003FA747 /* Apartment.swift */,
+				D2BD4E97292FE6DB003FA747 /* Payment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -196,6 +211,24 @@
 			path = PropertyDetail;
 			sourceTree = "<group>";
 		};
+		D26AFCCB292DCC30002C983A /* Tenant */ = {
+			isa = PBXGroup;
+			children = (
+				D26AFCCC292DCC3E002C983A /* Payment */,
+				D26AFCCF292DCCDA002C983A /* TenantHome.swift */,
+			);
+			path = Tenant;
+			sourceTree = "<group>";
+		};
+		D26AFCCC292DCC3E002C983A /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				D26AFCCD292DCC9C002C983A /* PayRent.swift */,
+				D2BD4E91292EDCFD003FA747 /* MakePaymentView.swift */,
+			);
+			path = Payment;
+			sourceTree = "<group>";
+		};
 		D2BB9A8E27AF01E70083453A = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +266,34 @@
 				D2BB9AA327AF01EA0083453A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D2BD4E99293001BD003FA747 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				D2BB9A9E27AF01E70083453A /* SplashView.swift */,
+				D2139AE227B2A46100E63C94 /* SplashViewModel.swift */,
+				D2139AE927B2AA9E00E63C94 /* SplashScreen.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		D2BD4E9A293001D0003FA747 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				D2139AEB27B2B18900E63C94 /* LoginView.swift */,
+				D23895E027B76F780056EE7F /* SignUpView.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		D2BD4E9B29300236003FA747 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D2BD4E9D2930028B003FA747 /* TabBarOwnerView.swift */,
+				D2BD4E9F293002AB003FA747 /* TabBarTenantView.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		F2A416BE1644F61C01434F13 /* Pods */ = {
@@ -359,13 +420,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2BD4E98292FE6DB003FA747 /* Payment.swift in Sources */,
 				D233D1A527BA012400CE6308 /* HapticsManager.swift in Sources */,
 				D20C91AD27F1EAC60066FB7A /* AddTenantFormView.swift in Sources */,
+				D2BD4E9E2930028B003FA747 /* TabBarOwnerView.swift in Sources */,
 				D2139AE527B2A4EE00E63C94 /* Property.swift in Sources */,
 				D2139AE827B2A62600E63C94 /* PortfolioView.swift in Sources */,
 				D233D19B27BA010400CE6308 /* Tenate.swift in Sources */,
 				D2139AEA27B2AA9E00E63C94 /* SplashScreen.swift in Sources */,
 				D2BB9A9B27AF01E70083453A /* AppDelegate.swift in Sources */,
+				D2BD4E92292EDCFD003FA747 /* MakePaymentView.swift in Sources */,
+				D2BD4EA0293002AB003FA747 /* TabBarTenantView.swift in Sources */,
+				D26AFCCE292DCC9C002C983A /* PayRent.swift in Sources */,
 				D22B77B927C276D500F8B200 /* RootPresentationModeKey.swift in Sources */,
 				D233D19927BA010400CE6308 /* Post.swift in Sources */,
 				D211227F27B8B46E00058D6E /* PropertyDetailView.swift in Sources */,
@@ -377,6 +443,7 @@
 				D229520027BC9E7D0019817A /* AddPropertyView.swift in Sources */,
 				D2BB9A9D27AF01E70083453A /* SceneDelegate.swift in Sources */,
 				D25EB0EA27F0B2890087A893 /* AddTenantView.swift in Sources */,
+				D2BD4E94292FDD6F003FA747 /* Apartment.swift in Sources */,
 				D20B866127E95AA8005C271E /* FinanceView.swift in Sources */,
 				D2BB9A9F27AF01E70083453A /* SplashView.swift in Sources */,
 				D233D1A727BA012400CE6308 /* AnalyticsManager.swift in Sources */,
@@ -387,6 +454,7 @@
 				D23895E127B76F780056EE7F /* SignUpView.swift in Sources */,
 				D2139AE327B2A46100E63C94 /* SplashViewModel.swift in Sources */,
 				D233D1A327BA012400CE6308 /* StorageManager.swift in Sources */,
+				D26AFCD0292DCCDA002C983A /* TenantHome.swift in Sources */,
 				D233D1A827BA012400CE6308 /* DatabaseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

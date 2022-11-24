@@ -19,6 +19,7 @@ struct Property: Identifiable, Codable {
     var cashflow: Int
     var taxes: Int
     var insurance: Int
+    let mortgage: Int
 }
 
 
@@ -36,6 +37,7 @@ struct MockData{
         income: 55000,
         cashflow: 50000,
         taxes: 5,
-        insurance: 5
+        insurance: 5,
+        mortgage: 1200
     )
 }

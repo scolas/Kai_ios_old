@@ -22,10 +22,13 @@ struct PortfolioView: View {
     @ObservedObject  var viewModel = PortfolioViewModel()
     @State private var isActive : Bool = false
     @State var isNavigationBarHidden: Bool = true
+    //var pCount = viewModel.getProperties().count()
+    var pCount = 15
+    
     var body: some View{
         NavigationView{
             VStack{
-                miniTopBar()
+                miniTopBar(propertyCount: pCount)
                     .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
                 
                 List(viewModel.properties, id: \.id) { property in
@@ -33,7 +36,9 @@ struct PortfolioView: View {
                         propertyCell(propety: property)
                     }
                     
-                }.onAppear{viewModel.getProperties()}
+                }.onAppear{viewModel.getProperties()
+                    
+                }
                 HStack{
                     NavigationLink("Add Property",destination: AddPropertyView(), isActive: self.$isActive )
                         .isDetailLink(false)
@@ -126,6 +131,7 @@ struct miniTopBar: View {
     @State private var searchValue: String = ""
     @StateObject  var viewModel = PortfolioViewModel()
     let username = UserDefaults.standard.string(forKey:"username") ?? "User"
+    @State var propertyCount: Int
     
     var body: some View{
         var tmp = viewModel.properties
@@ -138,7 +144,7 @@ struct miniTopBar: View {
                 VStack {
                     Text("Hi,\(username)" )
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 2, trailing: 0))
-                    Text("you have 100 property")
+                    Text("you have \(propertyCount) property")
                 }.foregroundColor(.white)
                 .padding()
                 Spacer()

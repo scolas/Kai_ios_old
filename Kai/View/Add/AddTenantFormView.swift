@@ -97,7 +97,8 @@ struct AddTenantFormView: View {
                         income: 0,
                         cashflow: 0,
                         taxes: Int(taxes) ?? 0,
-                        insurance: Int(insurance) ?? 0
+                        insurance: Int(insurance) ?? 0,
+                        mortgage: 2100
                     )
                     //addProperty(property: tmpProp)
                     var t = tmpProp

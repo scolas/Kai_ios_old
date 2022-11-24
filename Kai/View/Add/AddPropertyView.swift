@@ -262,7 +262,8 @@ struct AddPropertyView: View {
                     income: 0,
                     cashflow: 0,
                     taxes: Int(taxes) ?? 0,
-                    insurance: Int(insurance) ?? 0
+                    insurance: Int(insurance) ?? 0,
+                    mortgage: 2300
                 )
                 //addProperty(property: tmpProp)
                 var t = tmpProp

@@ -1,0 +1,6 @@
+framework module Pods_Kai {
+  umbrella header "Pods-Kai-umbrella.h"
+
+  export *
+  module * { export * }
+}

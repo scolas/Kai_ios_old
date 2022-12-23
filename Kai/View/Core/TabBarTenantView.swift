@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
-
 struct TabBarTenantView: View {
     var TenantModel = MockTenantData.mockTenant
+    @EnvironmentObject var viewModelAuth: AuthManager
     var body: some View {
+        
+        
         
         NavigationView{
             
@@ -38,18 +40,31 @@ struct TabBarTenantView: View {
                         .foregroundColor(Color.grayTxt)
                     
                     
-                    NavigationLink(destination: PayRent(payment: MockPaymentData.mockPayment)) {
-                        Button("$ Make a payment") {
-                            print("Button pressed!")
+                    NavigationLink(
+                        destination:PayRent(payment:MockPaymentData.mockPayment),
+                        label: {
+                                Text("$ Make a payment")
+                                .padding()
+                                .foregroundColor(.black)
+                                .frame(width: 319, height: 45, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                .background(Color(red: 0.906, green: 0.937, blue: 0.929))
+                                .clipShape(Capsule())
                         }
-                        .padding()
-                        .foregroundColor(.black)
-                        .frame(width: 319, height: 45, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        .background(Color(red: 0.906, green: 0.937, blue: 0.929))
-                        .clipShape(Capsule())
+                    )
+                    
+
+             
+                    
+                    Button(action: {
+                        //viewModel.signOut()
+                        viewModelAuth.signOut()
+                    }, label: {
+                        Text("Sign out")
+                            .frame(width: 200, height: 50)
+                            .background(Color.green)
+                            .padding()
+                    })
                     }
-               
-                }
                 
             }
             
@@ -60,6 +75,10 @@ struct TabBarTenantView: View {
 
 struct TabBarTenantView_Previews: PreviewProvider {
     static var previews: some View {
-        TabBarTenantView()
+        if #available(iOS 16.0, *) {
+            TabBarTenantView()
+        } else {
+            // Fallback on earlier versions
+        }
     }
 }

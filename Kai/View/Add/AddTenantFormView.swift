@@ -86,7 +86,7 @@ struct AddTenantFormView: View {
                     guard !name.isEmpty, !name.isEmpty else {
                         return
                     }
-                    let tmpProp = Kai.Property(
+                  /*  let tmpProp = Property(
                         id: "",
                         name: name,
                         image: "",
@@ -99,10 +99,11 @@ struct AddTenantFormView: View {
                         taxes: Int(taxes) ?? 0,
                         insurance: Int(insurance) ?? 0,
                         mortgage: 2100
-                    )
+                    )*/
                     //addProperty(property: tmpProp)
-                    var t = tmpProp
-                    print(t)
+                   // var t = tmpProp
+                    var t = MockData.mockProperty
+                    //print(t)
                     UserDefaults.standard.setValue("mrcolas", forKey: "username")
                     
                     guard let newPostID = createNewPostID(),

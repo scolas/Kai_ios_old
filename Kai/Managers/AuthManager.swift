@@ -9,15 +9,15 @@ import FirebaseAuth
 import Foundation
 
 /// Object to manage authentication
-final class AuthManager {
+final class AuthManager: ObservableObject {
     /// Shared instanece
     static let shared = AuthManager()
 
     /// Private constructor
-    private init() {}
+     init() {}
 
     /// Auth reference
-    private let auth = Auth.auth()
+     let auth = Auth.auth()
 
     /// Auth errors that can occur
     enum AuthError: Error {
@@ -26,16 +26,42 @@ final class AuthManager {
     }
 
     /// Determine if user is signed in
+   /*
+    var isSignedIn = false
     public var isSignedIn: Bool {
         return auth.currentUser != nil
+    }*/
+    
+    @Published var signedIn = false
+    @Published var accountNum = -1
+    var accountType = Role.tenant
+    
+    var isSignedIn: Bool{
+        return auth.currentUser != nil
     }
-
+    
+    func signIn(email: String, password: String){
+        auth.signIn(withEmail: email, password: password) {[weak self] result, error in
+            guard result != nil, error == nil else{
+                return
+            }
+            //success
+            DispatchQueue.main.async {
+                //self?.signedIn = true
+                self?.signedIn = true
+                
+                //accountType = result["role"]
+                //var test = ""
+            }
+            
+        }
+    }
     /// Attempt sign in
     /// - Parameters:
     ///   - email: Email of user
     ///   - password: Password of user
     ///   - completion: Callback
-    public func signIn(
+   /* public func signIn(
         email: String,
         password: String,
         completion: @escaping (Result<User, Error>) -> Void
@@ -57,7 +83,7 @@ final class AuthManager {
                 completion(.success(user))
             }
         }
-    }
+    }*/
 
     /// Attempt new user sign up
     /// - Parameters:
@@ -66,14 +92,14 @@ final class AuthManager {
     ///   - password: Password
     ///   - profilePicture: Optional profile picture data
     ///   - completion: Callback
-    public func signUp(
+   /* public func signUp(
         email: String,
         username: String,
         password: String,
-        profilePicture: Data?,
+       // profilePicture: Data?,
         completion: @escaping (Result<User, Error>) -> Void
     ) {
-        let newUser = User(username: username, email: email)
+        let newUser = User(username: username, email: email, userRole: 2)
         // Create account
         auth.createUser(withEmail: email, password: password) { result, error in
             guard result != nil, error == nil else {
@@ -83,9 +109,9 @@ final class AuthManager {
 
             DatabaseManager.shared.createUser(newUser: newUser) { success in
                 if success {
-                    StorageManager.shared.uploadProfilePicture(
-                        username: username,
-                        data: profilePicture
+                   /* StorageManager.shared.uploadProfilePicture(
+                        username: username
+                        //data: profilePicture
                     ) { uploadSuccess in
                         if uploadSuccess {
                             completion(.success(newUser))
@@ -93,18 +119,59 @@ final class AuthManager {
                         else {
                             completion(.failure(AuthError.newUserCreation))
                         }
-                    }
+                    }*/
+                    completion(.success(newUser))
                 }
                 else {
                     completion(.failure(AuthError.newUserCreation))
                 }
             }
         }
+    }*/
+    
+    func signUp(email: String, password: String,completion: @escaping (Result<User, Error>) -> Void){
+        auth.createUser(withEmail: email, password: password) {[weak self] result, error in
+            guard result != nil, error == nil else{
+                return
+            }
+            //success
+            DispatchQueue.main.async {
+                self?.signedIn = true
+                UserDefaults.standard.setValue(email, forKey: "username")
+                UserDefaults.standard.setValue(email, forKey: "email")
+                let newUser = User.init(username: email, email: email, userRole: 3)
+                DatabaseManager.shared.addUserRole1(newUser: newUser)
+                //completion(.success(newUser))
+            }
+           /* var newUser = User.init(username: email, email: email, userRole: 3)
+            DatabaseManager.shared.addUserRole(newUser: newUser){ success in
+                if success {
+                    completion(.success(newUser))
+                   
+                }
+                else {
+                    //completion(.failure(AuthError.newUserCreation))
+                }
+            }
+            */
+        }
     }
 
+    
+    func signOut(){
+        try? auth.signOut()
+        self.signedIn = false
+    }
+    
+    public func getUserRoleAuth(){
+        DatabaseManager.shared.getUserRole { result in
+            
+        }
+    }
+    
     /// Attempt Sign Out
     /// - Parameter completion: Callback upon sign out
-    public func signOut(
+    /*public func signOut(
         completion: @escaping (Bool) -> Void
     ) {
         do {
@@ -115,5 +182,5 @@ final class AuthManager {
             print(error)
             completion(false)
         }
-    }
+    }*/
 }

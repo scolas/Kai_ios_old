@@ -14,7 +14,7 @@
 		D2139AE527B2A4EE00E63C94 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2139AE427B2A4EE00E63C94 /* Property.swift */; };
 		D2139AE827B2A62600E63C94 /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2139AE727B2A62600E63C94 /* PortfolioView.swift */; };
 		D2139AEA27B2AA9E00E63C94 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2139AE927B2AA9E00E63C94 /* SplashScreen.swift */; };
-		D2139AEC27B2B18900E63C94 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2139AEB27B2B18900E63C94 /* LoginView.swift */; };
+		D2139AEC27B2B18900E63C94 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2139AEB27B2B18900E63C94 /* ContentView.swift */; };
 		D229520027BC9E7D0019817A /* AddPropertyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22951FF27BC9E7D0019817A /* AddPropertyView.swift */; };
 		D22B77B927C276D500F8B200 /* RootPresentationModeKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22B77B827C276D500F8B200 /* RootPresentationModeKey.swift */; };
 		D22B77BB27C30CB000F8B200 /* appColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22B77BA27C30CB000F8B200 /* appColors.swift */; };
@@ -61,7 +61,7 @@
 		D2139AE427B2A4EE00E63C94 /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
 		D2139AE727B2A62600E63C94 /* PortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioView.swift; sourceTree = "<group>"; };
 		D2139AE927B2AA9E00E63C94 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
-		D2139AEB27B2B18900E63C94 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		D2139AEB27B2B18900E63C94 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D22951FF27BC9E7D0019817A /* AddPropertyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPropertyView.swift; sourceTree = "<group>"; };
 		D22B77B827C276D500F8B200 /* RootPresentationModeKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPresentationModeKey.swift; sourceTree = "<group>"; };
 		D22B77BA27C30CB000F8B200 /* appColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appColors.swift; sourceTree = "<group>"; };
@@ -281,7 +281,6 @@
 		D2BD4E9A293001D0003FA747 /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				D2139AEB27B2B18900E63C94 /* LoginView.swift */,
 				D23895E027B76F780056EE7F /* SignUpView.swift */,
 			);
 			path = Register;
@@ -292,6 +291,7 @@
 			children = (
 				D2BD4E9D2930028B003FA747 /* TabBarOwnerView.swift */,
 				D2BD4E9F293002AB003FA747 /* TabBarTenantView.swift */,
+				D2139AEB27B2B18900E63C94 /* ContentView.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -448,7 +448,7 @@
 				D2BB9A9F27AF01E70083453A /* SplashView.swift in Sources */,
 				D233D1A727BA012400CE6308 /* AnalyticsManager.swift in Sources */,
 				D233D19227B9475000CE6308 /* FinanceAllView.swift in Sources */,
-				D2139AEC27B2B18900E63C94 /* LoginView.swift in Sources */,
+				D2139AEC27B2B18900E63C94 /* ContentView.swift in Sources */,
 				D233D1A627BA012400CE6308 /* AuthManager.swift in Sources */,
 				D233D1A427BA012400CE6308 /* NotificationsManager.swift in Sources */,
 				D23895E127B76F780056EE7F /* SignUpView.swift in Sources */,
@@ -524,7 +524,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -579,7 +579,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -600,6 +600,7 @@
 				DEVELOPMENT_TEAM = 6ZW67UK2AS;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Kai/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -607,7 +608,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.scottcolas.Kai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -622,6 +623,7 @@
 				DEVELOPMENT_TEAM = 6ZW67UK2AS;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Kai/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -629,7 +631,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.scottcolas.Kai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

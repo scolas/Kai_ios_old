@@ -48,6 +48,8 @@ final class AuthManager: ObservableObject {
             //success
             DispatchQueue.main.async {
                 //self?.signedIn = true
+                UserDefaults.standard.setValue(email, forKey: "username")
+                UserDefaults.standard.setValue(email, forKey: "email")
                 self?.signedIn = true
                 
                 //accountType = result["role"]
@@ -159,12 +161,16 @@ final class AuthManager: ObservableObject {
 
     
     func signOut(){
+        
         try? auth.signOut()
+        UserDefaults.standard.setValue("", forKey: "username")
+        UserDefaults.standard.setValue("", forKey: "email")
         self.signedIn = false
     }
     
     public func getUserRoleAuth(){
-        DatabaseManager.shared.getUserRole { result in
+        var username = UserDefaults.standard.string(forKey: "username") ?? " "
+        DatabaseManager.shared.getUserRole(for: username) { result in
             
         }
     }

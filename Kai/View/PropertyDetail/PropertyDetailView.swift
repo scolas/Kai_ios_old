@@ -88,6 +88,8 @@ struct topDetail: View {
 struct midDetail: View {
     var currerntProperty: Property
     var body: some View{
+        NavigationLink("Add Apartment", destination: SetTenantApartment(property: currerntProperty))
+
         HStack {
             VStack {
                 VStack{

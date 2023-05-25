@@ -18,7 +18,7 @@ class AppViewModel: ObservableObject{
     }
     
     func getUserRoleVal(){
-        //var username = UserDefaults.standard.string(forKey: "username") ?? " "
+        var username = UserDefaults.standard.string(forKey: "username") ?? " "
         //var userdata = DatabaseManager.shared.getUser(for:username)
        /* var rolein = -1
         var rolein1 = DatabaseManager.shared.getUser2(for:"mrcolas") { userroleVal in
@@ -32,7 +32,7 @@ class AppViewModel: ObservableObject{
                 }
             }*/
         
-        DatabaseManager.shared.getUserRole { result in
+        DatabaseManager.shared.getUserRole(for:username) { result in
             
         }
     }
@@ -192,10 +192,13 @@ struct ContentView: View {
         }
         .onAppear{
             viewModelAuth.signedIn = viewModelAuth.isSignedIn
-            DatabaseManager.shared.getUserRole { result in
-                print(result)
-                viewModelAuth.accountNum = result
+            DispatchQueue.main.async {
+                DatabaseManager.shared.getUserRole(for: username) { result in
+                    print(result)
+                    viewModelAuth.accountNum = result
+                }
             }
+
            // viewModel.signedIn = viewModel.isSignedIn
            // AuthManager.shared.isSignedIn =
         }

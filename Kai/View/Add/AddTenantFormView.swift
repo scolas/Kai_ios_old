@@ -104,7 +104,7 @@ struct AddTenantFormView: View {
                    // var t = tmpProp
                     var t = MockData.mockProperty
                     //print(t)
-                    UserDefaults.standard.setValue("mrcolas", forKey: "username")
+                   // UserDefaults.standard.setValue("mrcolas", forKey: "username")
                     
                     guard let newPostID = createNewPostID(),
                           let stringDate = String.date(from: Date()) else {

@@ -45,8 +45,8 @@ final class PropertyDetailViewModel: ObservableObject{
         //var allTenants: [(tenant: Tenant, owner: String)] = []
         var allTenants: [Tenant] = []
      
-
-        DatabaseManager.shared.tenants(for: "mrcolas") { result in
+        let username = UserDefaults.standard.string(forKey:"username") ?? "User"
+        DatabaseManager.shared.tenants(for: username) { result in
             DispatchQueue.main.async {
              
 

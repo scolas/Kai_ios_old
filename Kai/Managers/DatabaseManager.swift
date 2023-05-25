@@ -64,6 +64,29 @@ final class DatabaseManager{
         }
     }
     
+    /// Create new Apartment
+    /// - Parameters:
+    ///   - newPost: New Post model
+    ///   - completion: Result callback
+    public func createApartment(newApartment: Apartment, completion: @escaping (Bool) -> Void) {
+        guard let username = UserDefaults.standard.string(forKey: "username") else {
+            completion(false)
+            return
+        }
+        //apartment/property/apartmentIds/
+
+       // let reference = database.document("apartments/\(username)/\(newApartment.propertyId))/\(newApartment.id)")
+        let reference = database.document("apartments/\(newApartment.property.id)/\(newApartment.apartmentId)/apartment")
+        guard let data = newApartment.asDictionary() else {
+            completion(false)
+            return
+        }
+        reference.setData(data) { error in
+            completion(error == nil)
+        }
+    }
+    
+    
     /// Create new Tenant
     /// - Parameters:
     ///   - newPost: New Post model
@@ -235,10 +258,10 @@ final class DatabaseManager{
             completion(rolenum ?? -1)
         }
     }
-    public func getUserRole(completion: @escaping (_ result: Int) -> ()){
+    public func getUserRole(for username: String, completion: @escaping (_ result: Int) -> ()){
         let result = 1
         let ref = database.collection("Roles")
-            .document("a19@s.com")
+            .document(username)
         ref.getDocument { snapshot, error in
             guard let roles = snapshot?.data(),
             error == nil else {

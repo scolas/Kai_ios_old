@@ -12,7 +12,7 @@ final class PortfolioViewModel: ObservableObject{
     private var model: [Property] = []
     //for image of cell https://www.youtube.com/watch?v=CimY_Sr3gWw&ab_channel=iOSAcademy
     
-    func getProperties(){
+    func getProperties(for username: String){
         //Network calls
         
         //mock
@@ -20,7 +20,7 @@ final class PortfolioViewModel: ObservableObject{
         var allPosts: [Property] = []
         //var allPosts: [property: Property] = []
 
-        DatabaseManager.shared.properties(for: "mrcolas") {[weak self] result in
+        DatabaseManager.shared.properties(for: username) {[weak self] result in
             DispatchQueue.main.async {
               
 

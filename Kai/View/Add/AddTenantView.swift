@@ -26,7 +26,7 @@ private func createNewPostID() -> String? {
  
 
   
-        UserDefaults.standard.setValue("mrcolas", forKey: "username")
+       // UserDefaults.standard.setValue("mrcolas", forKey: "username")
 
         // Generate post ID
         guard let newPostID = createNewPostID(),
@@ -201,7 +201,7 @@ struct AddTenantView: View {
                 //addProperty(property: tmpProp)
                 var t = tmpProp
                 print(t)
-                UserDefaults.standard.setValue("mrcolas", forKey: "username")
+                //UserDefaults.standard.setValue("mrcolas", forKey: "username")
                 
                 guard let newPostID = createNewPostID(),
                       let stringDate = String.date(from: Date()) else {

@@ -19,6 +19,8 @@ struct PortfolioView: View {
         
     }*/
     //@ObservedObject var vm: PortfolioViewModel()
+    
+    let username = UserDefaults.standard.string(forKey:"username") ?? "User"
     @ObservedObject  var viewModel = PortfolioViewModel()
     @State private var isActive : Bool = false
     @State var isNavigationBarHidden: Bool = true
@@ -36,7 +38,7 @@ struct PortfolioView: View {
                         propertyCell(propety: property)
                     }
                     
-                }.onAppear{viewModel.getProperties()
+                }.onAppear{viewModel.getProperties(for: username)
                     
                 }
                 HStack{

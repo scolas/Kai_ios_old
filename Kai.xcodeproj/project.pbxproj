@@ -15,6 +15,8 @@
 		D2139AE827B2A62600E63C94 /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2139AE727B2A62600E63C94 /* PortfolioView.swift */; };
 		D2139AEA27B2AA9E00E63C94 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2139AE927B2AA9E00E63C94 /* SplashScreen.swift */; };
 		D2139AEC27B2B18900E63C94 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2139AEB27B2B18900E63C94 /* ContentView.swift */; };
+		D21ECE392958897D0011173B /* SetTenantApartment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21ECE382958897D0011173B /* SetTenantApartment.swift */; };
+		D21ECE3B29588EAD0011173B /* tempSetTenant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21ECE3A29588EAD0011173B /* tempSetTenant.swift */; };
 		D229520027BC9E7D0019817A /* AddPropertyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22951FF27BC9E7D0019817A /* AddPropertyView.swift */; };
 		D22B77B927C276D500F8B200 /* RootPresentationModeKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22B77B827C276D500F8B200 /* RootPresentationModeKey.swift */; };
 		D22B77BB27C30CB000F8B200 /* appColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22B77BA27C30CB000F8B200 /* appColors.swift */; };
@@ -62,6 +64,8 @@
 		D2139AE727B2A62600E63C94 /* PortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioView.swift; sourceTree = "<group>"; };
 		D2139AE927B2AA9E00E63C94 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		D2139AEB27B2B18900E63C94 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D21ECE382958897D0011173B /* SetTenantApartment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTenantApartment.swift; sourceTree = "<group>"; };
+		D21ECE3A29588EAD0011173B /* tempSetTenant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempSetTenant.swift; sourceTree = "<group>"; };
 		D22951FF27BC9E7D0019817A /* AddPropertyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPropertyView.swift; sourceTree = "<group>"; };
 		D22B77B827C276D500F8B200 /* RootPresentationModeKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPresentationModeKey.swift; sourceTree = "<group>"; };
 		D22B77BA27C30CB000F8B200 /* appColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appColors.swift; sourceTree = "<group>"; };
@@ -161,6 +165,8 @@
 				D22951FF27BC9E7D0019817A /* AddPropertyView.swift */,
 				D25EB0E927F0B2890087A893 /* AddTenantView.swift */,
 				D20C91AC27F1EAC60066FB7A /* AddTenantFormView.swift */,
+				D21ECE382958897D0011173B /* SetTenantApartment.swift */,
+				D21ECE3A29588EAD0011173B /* tempSetTenant.swift */,
 			);
 			path = Add;
 			sourceTree = "<group>";
@@ -433,6 +439,7 @@
 				D2BD4EA0293002AB003FA747 /* TabBarTenantView.swift in Sources */,
 				D26AFCCE292DCC9C002C983A /* PayRent.swift in Sources */,
 				D22B77B927C276D500F8B200 /* RootPresentationModeKey.swift in Sources */,
+				D21ECE392958897D0011173B /* SetTenantApartment.swift in Sources */,
 				D233D19927BA010400CE6308 /* Post.swift in Sources */,
 				D211227F27B8B46E00058D6E /* PropertyDetailView.swift in Sources */,
 				D233D19A27BA010400CE6308 /* User.swift in Sources */,
@@ -445,6 +452,7 @@
 				D25EB0EA27F0B2890087A893 /* AddTenantView.swift in Sources */,
 				D2BD4E94292FDD6F003FA747 /* Apartment.swift in Sources */,
 				D20B866127E95AA8005C271E /* FinanceView.swift in Sources */,
+				D21ECE3B29588EAD0011173B /* tempSetTenant.swift in Sources */,
 				D2BB9A9F27AF01E70083453A /* SplashView.swift in Sources */,
 				D233D1A727BA012400CE6308 /* AnalyticsManager.swift in Sources */,
 				D233D19227B9475000CE6308 /* FinanceAllView.swift in Sources */,

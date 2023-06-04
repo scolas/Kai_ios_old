@@ -17,7 +17,7 @@ struct SplashView: View {
             if self.viewModel.isLoading {
                 //PortfolioView()
                 //SignUpView()
-                LoginView()
+                ContentView()
             }else{
                 VStack{
                     ZStack{

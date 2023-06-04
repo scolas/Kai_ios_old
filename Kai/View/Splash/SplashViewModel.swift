@@ -17,10 +17,12 @@ class SplashViewModel: ObservableObject {
  
     func fetchData(){
         var allPosts: [Property] = []
+        let username = UserDefaults.standard.string(forKey:"username") ?? "User"
         DispatchQueue.main.asyncAfter(deadline: .now()+0.10) {
             self.isLoading = false
         }
-        DatabaseManager.shared.properties(for: "mrcolas") { result in
+        
+        DatabaseManager.shared.properties(for: username) { result in
             DispatchQueue.main.async {
               
 

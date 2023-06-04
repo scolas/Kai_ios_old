@@ -19,6 +19,8 @@ struct PortfolioView: View {
         
     }*/
     //@ObservedObject var vm: PortfolioViewModel()
+    
+    let username = UserDefaults.standard.string(forKey:"username") ?? "User"
     @ObservedObject  var viewModel = PortfolioViewModel()
     @State private var isActive : Bool = false
     @State var isNavigationBarHidden: Bool = true
@@ -36,7 +38,7 @@ struct PortfolioView: View {
                         propertyCell(propety: property)
                     }
                     
-                }.onAppear{viewModel.getProperties()
+                }.onAppear{viewModel.getProperties(for: username)
                     
                 }
                 HStack{
@@ -132,6 +134,7 @@ struct miniTopBar: View {
     @StateObject  var viewModel = PortfolioViewModel()
     let username = UserDefaults.standard.string(forKey:"username") ?? "User"
     @State var propertyCount: Int
+    @EnvironmentObject var viewModelAuth: AuthManager
     
     var body: some View{
         var tmp = viewModel.properties
@@ -145,6 +148,15 @@ struct miniTopBar: View {
                     Text("Hi,\(username)" )
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 2, trailing: 0))
                     Text("you have \(propertyCount) property")
+                    Button(action: {
+                        //viewModel.signOut()
+                        viewModelAuth.signOut()
+                    }, label: {
+                        Text("Sign out")
+                            .frame(width: 20, height: 5)
+                            .background(Color.green)
+                            .padding()
+                    })
                 }.foregroundColor(.white)
                 .padding()
                 Spacer()

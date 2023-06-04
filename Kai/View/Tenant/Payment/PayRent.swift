@@ -9,6 +9,8 @@ import SwiftUI
 
 struct PayRent: View {
     var payment: Payment
+    //@Binding var shouldPopToRootView : Bool
+    @Environment(\.presentationMode) var presentation
     var body: some View {
             
         VStack {
@@ -29,23 +31,30 @@ struct PayRent: View {
             .cornerRadius(20)
             .padding()
             
+
             
             NavigationLink(destination: SignUpView()) {
                 Button("$ Submit payment") {
                     print("Button pressed!")
+                    //ContentView()
+                    self.presentation.wrappedValue.dismiss()
                 }
+             
                 .padding()
                 .foregroundColor(.black)
                 .frame(width: 319, height: 45, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 .background(Color(red: 0.906, green: 0.937, blue: 0.929))
                 .clipShape(Capsule())
+                
             }
+            
         }
         
     }
 }
 
 struct PayRent_Previews: PreviewProvider {
+    //@Binding var shouldPopToRootView2 : Bool
     static var previews: some View {
         PayRent(payment: MockPaymentData.mockPayment)
     }

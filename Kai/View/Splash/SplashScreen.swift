@@ -78,7 +78,7 @@ struct SplashScreen: View {
                         
       
                         NavigationLink(
-                            destination: LoginView(),
+                            destination: ContentView(),
                             label: {
                                 Text("Login")
                                 .padding()

@@ -88,12 +88,14 @@ struct topDetail: View {
 struct midDetail: View {
     var currerntProperty: Property
     var body: some View{
+        NavigationLink("Add Apartment", destination: SetTenantApartment(property: currerntProperty))
+
         HStack {
             VStack {
                 VStack{
                     Text("Expense")
                         .font(.system(size: 16))
-                    Text("$5,000.00")
+                    Text(String(currerntProperty.expense)+"unit")
                         .font(.custom("Poppins-Regular", size: 15))
                         .foregroundColor(Color.grayTxt)
                         .padding(.bottom, 10)

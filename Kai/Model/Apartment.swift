@@ -8,7 +8,7 @@
 import Foundation
 
 struct Apartment: Codable,Identifiable {
-    let id: String
+    var id: String
     let property: Property
     let name: String
     let address: String
@@ -17,7 +17,8 @@ struct Apartment: Codable,Identifiable {
     let moveInDate: Date
     let propertyId: String
     let identifer: String
-    let apartmentId: Int
+    var apartmentId: String
+    let tenantEmail: String
 }
 
 
@@ -34,6 +35,7 @@ struct MockApartmentData{
         moveInDate: Date(),
         propertyId: "123",
         identifer: "1234",
-        apartmentId: 123
+        apartmentId: "123",
+        tenantEmail: "mrcola@c.com"
     )
 }

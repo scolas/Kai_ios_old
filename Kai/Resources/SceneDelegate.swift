@@ -20,16 +20,32 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Create the SwiftUI view that provides the window contents.
         //let contentView = SplashView()
-        let viewModel = AppViewModel()
-        let contentView = LoginView().environmentObject(viewModel)
-                            
-
-        // Use a UIHostingController as window root view controller.
-        if let windowScene = scene as? UIWindowScene {
-            let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: contentView)
-            self.window = window
-            window.makeKeyAndVisible()
+        //let viewModel = AppViewModel()
+        //let contentView = LoginView().environmentObject(viewModel)
+        
+        let teantAccount = false
+        let owenerAccout = true
+        if(owenerAccout){
+            let contentView = TabBarOwnerView()
+            // Use a UIHostingController as window root view controller.
+            if let windowScene = scene as? UIWindowScene {
+                let window = UIWindow(windowScene: windowScene)
+                window.rootViewController = UIHostingController(rootView: contentView)
+                self.window = window
+                window.makeKeyAndVisible()
+            }
+            
+        }else if(teantAccount){
+            
+            let viewModelAuth = AuthManager()
+            let contentView = ContentView().environmentObject(viewModelAuth)
+            // Use a UIHostingController as window root view controller.
+            if let windowScene = scene as? UIWindowScene {
+                let window = UIWindow(windowScene: windowScene)
+                window.rootViewController = UIHostingController(rootView: contentView)
+                self.window = window
+                window.makeKeyAndVisible()
+            }
         }
     }
 

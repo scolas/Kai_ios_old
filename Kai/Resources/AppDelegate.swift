@@ -5,10 +5,22 @@
 //  Created by Scott Colas on 2/5/22.
 //
 
-import UIKit
+///import UIKit
 import Firebase
+import SwiftUI
 
 @main
+struct Kai: App{
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    var body: some Scene{
+        WindowGroup{
+            let viewModelAuth = AuthManager()
+            ContentView()
+                .environmentObject(viewModelAuth)
+        }
+    }
+}
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 

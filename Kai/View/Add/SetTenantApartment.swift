@@ -1,4 +1,24 @@
 //
+//  SetTenantApartment.swift
+//  Kai
+//
+//  Created by Scott Colas on 12/25/22.
+//
+
+import SwiftUI
+/*
+struct SetTenantApartment: View {
+    var body: some View {
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    }
+}
+
+struct SetTenantApartment_Previews: PreviewProvider {
+    static var previews: some View {
+        SetTenantApartment()
+    }
+}*/
+//
 //  AddTenantFormView.swift
 //  Kai
 //
@@ -6,7 +26,7 @@
 //
 
 import SwiftUI
-class FormViewModel: ObservableObject{
+class SetTenantViewModel: ObservableObject{
     @State var name = ""
     @State var property = ""
     @State var unit = ""
@@ -23,7 +43,8 @@ private func createNewPostID() -> String? {
     return "\(username)_\(randomNumber)_\(timeStamp)"
 }
 
-struct AddTenantFormView: View {
+struct SetTenantApartment: View {
+    var property: Property
     @State var name: String = ""
     @State var Property: String = ""
     @State var MoveInDate: String = ""
@@ -35,14 +56,30 @@ struct AddTenantFormView: View {
     @State private var searchValue: String = ""
     @StateObject var viewModel = FormViewModel()
     
+/*
+    var id: String
+    let property: Property
+    let name: String
+    let address: String
+    let unit: Int
+    let rent: Int
+    let moveInDate: Date
+    let propertyId: String
+    let identifer: String
+    let apartmentId: Int
+    let tenantEmail: String
+}*/
+    
     var body: some View {
+       
+        
         NavigationView{
             VStack{
-                Text("Complete your Tenant data")
+                Text("Complete your Apartment data")
                 Text("add start management")
                 Form{
                     Section(header: Text("Name")){
-                        TextField("Name", text:$viewModel.name)
+                        TextField("Name", text:$name)
                             //.padding()
                             .foregroundColor(Color.grayTxt)
                             .disableAutocorrection(true)
@@ -102,7 +139,8 @@ struct AddTenantFormView: View {
                     )*/
                     //addProperty(property: tmpProp)
                    // var t = tmpProp
-                    var t = MockData.mockProperty
+                    var t = MockApartmentData.mockApartment
+                    var apartmentData = Apartment.init(id: "", property: property, name: name, address: unitNumber, unit: Int(unitNumber) ?? 0, rent: Int(Rent) ?? 0, moveInDate: Date.now, propertyId: property.id, identifer: "", apartmentId: "", tenantEmail: "")
                     //print(t)
                    // UserDefaults.standard.setValue("mrcolas", forKey: "username")
                     
@@ -111,7 +149,10 @@ struct AddTenantFormView: View {
                               return
                           }
                     t.id = newPostID
-                    DatabaseManager.shared.createProperty(newProperty: t) { finished in
+                   // t.property = property
+                    apartmentData.apartmentId = newPostID
+                    
+                    DatabaseManager.shared.createApartment(newApartment: apartmentData) { finished in
                         guard finished else {
                             return
                         }
@@ -133,8 +174,9 @@ struct AddTenantFormView: View {
     }
 }
 
-struct AddTenantFormView_Previews: PreviewProvider {
+struct SetTenantApartment_Previews: PreviewProvider {
     static var previews: some View {
-        AddTenantFormView()
+        SetTenantApartment(property: MockData.mockProperty)
     }
 }
+

@@ -95,7 +95,7 @@ struct midDetail: View {
                 VStack{
                     Text("Expense")
                         .font(.system(size: 16))
-                    Text("$5,000.00")
+                    Text(String(currerntProperty.expense)+"unit")
                         .font(.custom("Poppins-Regular", size: 15))
                         .foregroundColor(Color.grayTxt)
                         .padding(.bottom, 10)

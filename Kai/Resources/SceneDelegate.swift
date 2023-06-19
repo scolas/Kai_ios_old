@@ -25,6 +25,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let teantAccount = false
         let owenerAccout = true
+        
+        //let teantAccount = true
+        //let owenerAccout = false
+        
         if(owenerAccout){
             let contentView = TabBarOwnerView()
             // Use a UIHostingController as window root view controller.
@@ -38,7 +42,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }else if(teantAccount){
             
             let viewModelAuth = AuthManager()
-            let contentView = ContentView().environmentObject(viewModelAuth)
+            let contentView = TabBarTenantView()
+           // let contentView = ContentView().environmentObject(viewModelAuth)
             // Use a UIHostingController as window root view controller.
             if let windowScene = scene as? UIWindowScene {
                 let window = UIWindow(windowScene: windowScene)

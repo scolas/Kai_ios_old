@@ -52,6 +52,17 @@ struct TabBarTenantView: View {
                         }
                     )
                     
+                    NavigationLink(
+                        destination:PaymentHistory(),
+                        label: {
+                                Text("Previous payments ")
+                                .padding()
+                                .foregroundColor(.black)
+                                .frame(width: 319, height: 45, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                .background(Color(red: 0.906, green: 0.937, blue: 0.929))
+                                .clipShape(Capsule())
+                        }
+                    )
 
              
                     

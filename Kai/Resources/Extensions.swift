@@ -87,5 +87,19 @@ extension String{
         let string = formatter.string(from: date)
         return string
     }
+    
+    // formatting text for currency textField
+    func currencyFormatting() -> String {
+        if let value = Double(self) {
+            let formatter = NumberFormatter()
+            formatter.numberStyle = .currency
+            formatter.maximumFractionDigits = 2
+            formatter.minimumFractionDigits = 2
+            if let str = formatter.string(for: value) {
+                return str
+            }
+        }
+        return ""
+    }
 }
 

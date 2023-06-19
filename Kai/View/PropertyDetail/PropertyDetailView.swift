@@ -12,15 +12,16 @@ struct PropertyDetailView: View {
     var body: some View {
         
         VStack{
-            topDetail(currerntProperty: property)
+           topDetail(currerntProperty: property)
             
             midDetail(currerntProperty: property)
              /*   .padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15))*/
         
             // Text("tet")
             
-            bottomDetail(currerntProperty: property)
+           // bottomDetail(currerntProperty: property)
         }
+        .offset(y: -40)
         
     }
     
@@ -42,7 +43,7 @@ struct topDetail: View {
             
             HStack {
                 Label {
-                    Text(String(currerntProperty.units)+"units")
+                    Text(String(currerntProperty.units)+" units")
                         .font(.custom("Poppins-Regular", size: 18))
                         .foregroundColor(Color.grayTxt)
                 } icon: {
@@ -53,7 +54,7 @@ struct topDetail: View {
                 Spacer()
                 
                 Label {
-                    Text("Owned for 12 years")
+                    Text(String(currerntProperty.owned))
                         .font(.custom("Poppins-Regular", size: 18))
                         .foregroundColor(Color.grayTxt)
                 } icon: {
@@ -95,7 +96,7 @@ struct midDetail: View {
                 VStack{
                     Text("Expense")
                         .font(.system(size: 16))
-                    Text(String(currerntProperty.expense)+"unit")
+                    Text(String(currerntProperty.expense).currencyFormatting())
                         .font(.custom("Poppins-Regular", size: 15))
                         .foregroundColor(Color.grayTxt)
                         .padding(.bottom, 10)
@@ -103,13 +104,13 @@ struct midDetail: View {
                 
                 Text("Income")
                     .font(.system(size: 16))
-                Text("$10,000.00")
+                Text(String(currerntProperty.income).currencyFormatting())
                     .font(.custom("Poppins-Regular", size: 15))
                     .foregroundColor(Color.grayTxt)
                     .padding(.bottom, 10)
                 Text("Cash Flow")
                     .font(.system(size: 16))
-                Text("$5,000.00")
+                Text(String(currerntProperty.cashflow).currencyFormatting())
                     .font(.custom("Poppins-Regular", size: 15))
                     .foregroundColor(Color.grayTxt)
                     .padding(.bottom, 10)

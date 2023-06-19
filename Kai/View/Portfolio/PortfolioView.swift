@@ -38,7 +38,7 @@ struct PortfolioView: View {
                         propertyCell(propety: property)
                     }
                     
-                }.onAppear{viewModel.getProperties(for: username)
+                }.onAppear{viewModel.getMockProperties(for: username)
                     
                 }
                 HStack{
@@ -60,7 +60,7 @@ struct PortfolioView: View {
             .navigationBarTitle("Portfolio")
             .navigationBarHidden(self.isNavigationBarHidden)
             .onAppear {
-                self.isNavigationBarHidden = true
+               self.isNavigationBarHidden = true
             }
             
         }
@@ -69,6 +69,11 @@ struct PortfolioView: View {
         
     }
 }
+
+
+
+
+
 struct cardProperty: View {
     @ObservedObject var vm: PortfolioViewModel
     @State private var isActive : Bool = false
@@ -141,8 +146,7 @@ struct miniTopBar: View {
         
         VStack {
             HStack {
-                Image("person1")
-                    .padding()
+                //Image("person1").padding()
                 Spacer()
                 VStack {
                     Text("Hi,\(username)" )
@@ -153,20 +157,17 @@ struct miniTopBar: View {
                         viewModelAuth.signOut()
                     }, label: {
                         Text("Sign out")
-                            .frame(width: 20, height: 5)
-                            .background(Color.green)
+                            .frame(width: 150, height: 20)
                             .padding()
                     })
                 }.foregroundColor(.white)
                 .padding()
                 Spacer()
-                Image(systemName: "message")
-                    .padding()
-                    .foregroundColor(.white)
+               // Image(systemName: "message").padding().foregroundColor(.white)
             }
             
 
-            HStack {
+           /* HStack {
                 Image(systemName: "magnifyingglass")
                     .foregroundColor(.white)
                 TextField("Search",
@@ -179,7 +180,7 @@ struct miniTopBar: View {
             .padding()
                 .background(Capsule().fill(Color.medGreen))
               //.textFieldStyle(OvalTextFieldStyle())
-                .padding()
+                .padding()*/
         }
         
         .background(Color.darkGreen)

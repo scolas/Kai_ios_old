@@ -26,7 +26,12 @@ struct Tenant: Codable,Identifiable {
 }
 
 
-
+/* var ten: [Tenant] = [
+     Tenant(id: "1", name: "Paul", address: "Sanford ave", unit: 1, rent: 2000, moveInDate: Date(), propertyId: "1"),
+     Tenant(id: "2", name: "Ashley", address: "Sanford ave", unit: 12, rent: 2000, moveInDate: Date(), propertyId: "3"),
+     Tenant(id: "1", name: "Kim", address: "Sanford ave", unit: 3, rent: 2000, moveInDate: Date(), propertyId: "1")
+     
+ ]*/
 struct MockTenantData{
     static let tenants = [mockTenant,mockTenant,mockTenant]
     

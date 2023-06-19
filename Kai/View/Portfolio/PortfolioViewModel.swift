@@ -41,6 +41,20 @@ final class PortfolioViewModel: ObservableObject{
        
     }
     
+    func getMockProperties(for username: String){
+        //Network calls
+        
+        //mock
+        self.properties = MockData.properties
+        var allPosts: [Property] = []
+        //var allPosts: [property: Property] = []
+
+
+        
+    
+       
+    }
+    
     
 
 }
